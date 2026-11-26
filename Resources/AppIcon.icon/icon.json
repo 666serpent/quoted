@@ -1,0 +1,26 @@
+{
+  "fill": "system-dark",
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "quotation.svg",
+          "name": "Quotation",
+          "glass": false
+        }
+      ],
+      "specular": false,
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}

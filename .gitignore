@@ -1,0 +1,8 @@
+.build/
+.build-tests/
+.build-icon/
+.build-docs/
+dist/
+*.dSYM/
+.swiftpm/
+.DS_Store

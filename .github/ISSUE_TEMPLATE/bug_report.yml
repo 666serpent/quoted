@@ -1,0 +1,28 @@
+name: Bug report
+description: Report an issue with Quoted.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Quoted version
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "macOS 26.5"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include what you expected and how to reproduce it. For a matching issue, include the song title, artist, and version if you are comfortable sharing them.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or additional details

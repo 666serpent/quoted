@@ -1,0 +1,35 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quoted-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    runs-on: macos-26
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Show toolchain
+        run: swift --version
+      - name: Run offline tests
+        run: ./scripts/test.sh
+      - name: Build and package
+        run: ./scripts/package.sh
+      - name: Save Apple silicon build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Quoted-macOS-arm64
+          path: |
+            dist/Quoted-macOS-arm64.zip
+            dist/SHA256SUMS
+          if-no-files-found: error

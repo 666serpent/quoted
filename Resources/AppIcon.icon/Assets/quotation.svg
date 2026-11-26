@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <path id="quote" d="M25 168H75C89 168 100 157 100 143V82C100 39 72 10 28 0L8 28C29 37 40 52 40 64H25C11 64 0 75 0 89V143C0 157 11 168 25 168Z"/>
+  </defs>
+  <g fill="#f5f5f7">
+    <use href="#quote" transform="translate(252 697) scale(2.2 -2.2)"/>
+    <use href="#quote" transform="translate(552 697) scale(2.2 -2.2)"/>
+  </g>
+</svg>
